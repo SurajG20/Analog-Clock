@@ -23,18 +23,19 @@ body{
 }
 /* Arranging numbers around the clock */
 .clock .number{
-    --rotations : 0;
     position: absolute;
     width: 100%;
     height: 100%;
     text-align: center;
 
+
+    /* --rotations : 0; */
     /* Rotating the numbers using a variable */
-    transform: rotate(var(--rotations));  
+    /* transform: rotate(var(--rotations));   */
 }
 
 /* We can do the same the thing with javascript */
-.clock .number1{
+/* .clock .number1{
     --rotations : 30deg;
 }
 .clock .number2{
@@ -66,12 +67,11 @@ body{
 }
 .clock .number11{
     --rotations : 330deg;
-}
+} */
 
 /* arranging hands of clock */
 .clock .hands{
     /* we want to change the value of javascript, hence avoiding deg  */
-    --rotations:0;
     border: 1px solid white;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -80,7 +80,7 @@ body{
     left: 50%;
     /* translate to make the hands center */
     /* Calc for evaluting the expression, rotations for rotating the hands */
-    transform: translateX(-50%) rotate(calc(var(--rotations)*1deg));
+    transform: translateX(-50%);
     /* We want to rotate hands element from bottom not its center */
     transform-origin: bottom;
     z-index: 10;
